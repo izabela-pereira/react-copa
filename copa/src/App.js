@@ -9,15 +9,15 @@ import Dados from './pages/Dados/Dados.jsx';
 function App() {
   return (
     <Router>
-      <ul>
+      <ul className="navBar">
         <li>
-          <Link to="/">Home</Link>
+          <Link className="link" to="/">Home</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link className="link" to="/login">Login</Link>
         </li>
         <li>
-          <Link to="/dados">Dados</Link>
+          <Link className="link" to="/dados">Dados</Link>
         </li>
       </ul>
 

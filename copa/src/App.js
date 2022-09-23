@@ -1,20 +1,39 @@
 import './App.css';
-import {Routes, Route} from "react-router-dom";
+import {BrowserRouter, NavLink, Routes, Route} from "react-router-dom";
+import Home from './pages/Home/Home.jsx';
+import Login from './pages/Login/Login.jsx'
+import Dados from './pages/Dados/Dados.jsx'
 
 import Login from './pages/Login';
 
 function App() {
   return (
-    <div>
-      <LoginPage />
-        {/* <MenuPageTemplate>
-           <Routes>
-             <Route path ="/" exact = {true} element = {<HomePage/>}/>
-             <Route path ="/login" exact = {true} element = {<LoginPage/>}/>
-             <Route path ="/dados" exact = {true} element = {<DadosPage/>}/>
-           </Routes>
-        </MenuPageTemplate> */}
-    </div>
+      <BrowserRouter>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/">
+                Home
+              </NavLink >
+            </li>
+            <li>
+              <NavLink to="/login">
+                Login
+              </NavLink >
+            </li>
+            <li>
+              <NavLink to="/dados">
+                  Dados
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path ="/" element = {<Home/>}/>
+          <Route path ="/login" element = {<Login/>}/>
+          <Route path ="/dados" element = {<Dados/>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 

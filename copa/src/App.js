@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import Login from "./pages/Login/Login";
 import Dados from './pages/Dados/Dados';
 
-import Login from './pages/Login';
+
 
 function App() {
   return (

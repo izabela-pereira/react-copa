@@ -1,9 +1,12 @@
 import './App.css';
 import {Routes, Route} from "react-router-dom";
 
+import LoginPage from './LoginPages';
+
 function App() {
   return (
     <div>
+      <LoginPage />
         {/* <MenuPageTemplate>
            <Routes>
              <Route path ="/" exact = {true} element = {<HomePage/>}/>

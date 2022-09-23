@@ -1,39 +1,32 @@
-import './App.css';
-import {BrowserRouter, NavLink, Routes, Route} from "react-router-dom";
-import Home from './pages/Home/Home.jsx';
-import Login from './pages/Login/Login.jsx'
-import Dados from './pages/Dados/Dados.jsx'
+import {BrowserRouter as Router, Link, Routes, Route} from "react-router-dom";
+
+import Home from './pages/Home/Home';
+import Login from "./pages/Login/Login";
+import Dados from './pages/Dados/Dados';
 
 import Login from './pages/Login';
 
 function App() {
   return (
-      <BrowserRouter>
-        <nav>
-          <ul>
-            <li>
-              <NavLink to="/">
-                Home
-              </NavLink >
-            </li>
-            <li>
-              <NavLink to="/login">
-                Login
-              </NavLink >
-            </li>
-            <li>
-              <NavLink to="/dados">
-                  Dados
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path ="/" element = {<Home/>}/>
-          <Route path ="/login" element = {<Login/>}/>
-          <Route path ="/dados" element = {<Dados/>}/>
-        </Routes>
-      </BrowserRouter>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/dados">Dados</Link>
+        </li>
+      </ul>
+
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/dados" element={<Dados/>}/>
+      </Routes>
+    </Router>
   );
 }
 

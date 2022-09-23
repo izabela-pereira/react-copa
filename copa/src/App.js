@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Link, Routes, Route} from "react-router-dom";
 
-import Home from './pages/Home/Home';
-import Login from "./pages/Login/Login";
-import Dados from './pages/Dados/Dados';
+import Home from './pages/Home/Home.jsx';
+import Login from "./pages/Login/Login.jsx";
+import Dados from './pages/Dados/Dados.jsx';
 
 
 
